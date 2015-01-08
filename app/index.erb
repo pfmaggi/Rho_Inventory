@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>Inventory Manager</h2>
+  <nav>
+    <ul class="nav nav-pills nav-stacked span2">
+      <li><a href="ProductCatalog" class="btn btn-large btn-primary"><i class="pull-left glyphicon glyphicon-th-list" ></i>  Product Catalog</a></li>
+      <li><a href="Inventory" class="btn btn-large btn-primary"><i class="pull-left glyphicon glyphicon-plus-sign" ></i>  Inventory</a></li>
+      <li><a href="<%= url_for :controller => Inventory, :action => :scanPage %>" class="btn btn-large btn-primary"><i class="pull-left glyphicon glyphicon-barcode" ></i>  Scan Barcodes</a></li>
+    </ul>
+  </nav>
+</div>

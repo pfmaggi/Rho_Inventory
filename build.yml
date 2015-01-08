@@ -1,0 +1,32 @@
+---
+sdkversion: 5.0.0
+name: InventoryManagement
+version: '1.0'
+vendor: rhomobile
+build: debug
+applog: rholog.txt
+iphone:
+  configuration: Release
+  sdk: iphonesimulator7.0
+  provisionprofile: ''
+  codesignidentity: iPhone Developer
+  entitlements: ''
+  BundleIdentifier: com.rhomobile.inventorymanagement
+  BundleURLScheme: inventorymanagement
+wp8:
+  productid: 26c12110-799f-0132-80a1-0088653e35ef
+android:
+  manifest_template: AndroidManifest.erb
+  version: 4.1.1
+  capabilities:
+    - native_browser
+wm:
+  sdk: "Windows Mobile 6.5.3 Professional DTK (ARMV4I)"
+  emulator: "Windows Mobile 6.5.3 Professional VGA Emulator"
+  capabilities:
+    - motorola_browser
+extensions:
+- rhoconnect-client
+- barcode
+app_type: rhoelements
+capabilities: []

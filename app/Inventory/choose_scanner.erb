@@ -1,0 +1,18 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1>Choose a scanner</h1>
+      <a href="<%= Rho::Application.startURI %>" class="ui-btn-left" data-icon="home" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+        Home
+      </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+        <% $scanners.each_with_index do |scanner, index| %>
+          <a href="#" data-ajax="false" onclick="<%= url_for(:action => :scan_using_chosen_scanner, :query => {:scanner_index => index}) %>" data-role="button"><%= scanner.friendlyName || scanner.scannerType %></a> 
+        <% end %>
+        <a href="<%= url_for :action => :enumerate_scanners %>" data-role="button" data-ajax="false" >Enumerate scanners</a>      
+    </ul>
+  </div>
+<div>

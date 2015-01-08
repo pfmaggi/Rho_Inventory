@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>New Product</h2>
+
+  <form method="POST" action="<%= url_for :action => :create %>" class="form-horizontal span8">
+    <input type="hidden" name="id" value="<%= @productcatalog.object %>"/>
+    <div class="form-group">
+      <label class="control-label" for="productcatalog[Name]">Name</label>
+      <div class="controls">
+        <input type="text" id="productcatalog[Name]" name="productcatalog[Name]" <%= placeholder("Name") %> />
+      </div>
+    </div>
+      
+    <div class="form-group">
+      <label class="control-label" for="productcatalog[SKU]">Sku</label>
+      <div class="controls">
+        <input type="text" id="productcatalog[SKU]" name="productcatalog[SKU]" <%= placeholder("Sku") %> />
+      </div>
+    </div>
+      
+    <div>
+      <a href="<%= url_for :action => :index %>" class="btn  btn-default "><i class="glyphicon glyphicon-arrow-left" ></i>  Cancel</a>
+      <input type="submit" value="Create" class="btn  btn-success"/>  
+    </div>
+  </form>
+</div>
