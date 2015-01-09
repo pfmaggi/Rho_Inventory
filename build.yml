@@ -29,4 +29,6 @@ extensions:
 - rhoconnect-client
 - barcode
 app_type: rhoelements
+rhoelements:
+  config: "Config/Config.xml"
 capabilities: []
